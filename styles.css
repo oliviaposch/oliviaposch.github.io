@@ -28,6 +28,10 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
   }
 }
 
+nav.navbar .nav-item {
+  text-align: right;
+}
+
 .description {
   margin-bottom: 2rem;
 }

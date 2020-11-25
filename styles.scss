@@ -33,6 +33,10 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
         font-size: $font-title-size-xl;
     }
 }
+
+nav.navbar .nav-item {
+    text-align: right;
+}
 .description{
     margin-bottom: 2rem;
 }
