@@ -1,0 +1,107 @@
+/*
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-down(xs) { ... }
+@include media-breakpoint-only(xs) { ... }
+@include media-breakpoint-between(md, xl) { ... }
+*/
+@import "node_modules/bootstrap/scss/_functions";
+@import "node_modules/bootstrap/scss/_variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+$font-title-size-xs: 35px;
+$font-title-size-sm: 55px;
+$font-title-size-xl: 70px;
+$font-text-size-xs: 16px;
+$font-text-size-sm: 18px;
+$font-text-size-xl: 20px;
+$color-pink: #fe73a6;
+$color-black: #000;
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+h1, .h1, h2, .h2, h3, .h3, .contact-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: $font-title-size-xs;
+    line-height: 1em;;
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(md){
+        font-size: $font-title-size-sm;
+    }
+    @include media-breakpoint-up(xl){
+        font-size: $font-title-size-xl;
+    }
+}
+.description{
+    margin-bottom: 2rem;
+}
+table{
+    img{
+        width: 100px;
+        height: 60px;
+        width: 100px;
+    }
+    tr {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include media-breakpoint-up(sm){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include media-breakpoint-up(lg){
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
+section{
+    @include media-breakpoint-up(md) {
+        article, .article{
+            height: 100vh;
+        }
+    }
+   
+}
+section > div, section > article{
+    padding: 4em 0;
+}
+#skills{
+    h1{
+        margin-bottom: 2rem;
+    }
+}
+.project{
+    .number{
+        border: 6px solid $color-black;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        margin-bottom: 1.5em;
+        p{
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.7em;
+            color: $color-black;
+        }
+    }
+    
+}
+#links {
+    padding: 4em 0;
+    img {
+    width: 45px;
+    margin: 0 2em 0 0;
+    }
+}
+
+article{
+    & div:first-of-type{
+        padding-bottom: 2rem;
+    }
+    @include media-breakpoint-up(md) {
+        & div:first-of-type{
+            padding-bottom: 0rem;
+        } 
+    }
+}

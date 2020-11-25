@@ -1,0 +1,102 @@
+/*
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-down(xs) { ... }
+@include media-breakpoint-only(xs) { ... }
+@include media-breakpoint-between(md, xl) { ... }
+*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+h1, .h1, h2, .h2, h3, .h3, .contact-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1em;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  h1, .h1, h2, .h2, h3, .h3, .contact-title {
+    font-size: 55px;
+  }
+}
+@media (min-width: 1200px) {
+  h1, .h1, h2, .h2, h3, .h3, .contact-title {
+    font-size: 70px;
+  }
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+table img {
+  width: 100px;
+  height: 60px;
+  width: 100px;
+}
+table tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 576px) {
+  table tr {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  table tr {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  section article, section .article {
+    height: 100vh;
+  }
+}
+
+section > div, section > article {
+  padding: 4em 0;
+}
+
+#skills h1 {
+  margin-bottom: 2rem;
+}
+
+.project .number {
+  border: 6px solid #000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
+}
+.project .number p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.7em;
+  color: #000;
+}
+
+#links {
+  padding: 4em 0;
+}
+#links img {
+  width: 45px;
+  margin: 0 2em 0 0;
+}
+
+article div:first-of-type {
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  article div:first-of-type {
+    padding-bottom: 0rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
