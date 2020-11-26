@@ -3,6 +3,7 @@
 const sections = document.querySelectorAll('section');
 const homeSection = document.getElementById('home'); //console.log(homeSection);
 const navbarBrand = document.querySelector('.navbar-brand');
+const nav = document.querySelector('.navbar'); //console.log(nav); 
 
 function getPosition(element) {
   let yPosition = 0;
@@ -13,12 +14,12 @@ function getPosition(element) {
   }
 
   return yPosition;
-}
+}  
 
 //fade In Elements on Scroll
 for(let i = 0; i < sections.length; i++){
     const section = sections[i];
-    const sectionTop = getPosition(section); console.log(sectionTop);
+    const sectionTop = getPosition(section); //console.log(sectionTop);
     if(section === homeSection){
       section.style.opacity = 1;
     }else{
