@@ -56,7 +56,12 @@ nav.navbar {
             }
         }
     }
-    max-width: 960px;
+    @include media-breakpoint-up(lg){
+        max-width: 960px;
+    }
+    @include media-breakpoint-up(xl){
+        max-width: 1140px;
+    }
     margin: auto;
     padding-top: 2em;
 }
@@ -131,6 +136,9 @@ section > div > .article, section > article{
     img{
         max-width: 80%;
     }
+}
+section{
+    transition: all 0.35s;
 }
 #links {
     padding: 8em 0;

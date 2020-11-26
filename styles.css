@@ -29,7 +29,6 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
 }
 
 nav.navbar {
-  max-width: 960px;
   margin: auto;
   padding-top: 2em;
 }
@@ -50,6 +49,16 @@ nav.navbar .nav-item .nav-link {
 @media (min-width: 992px) {
   nav.navbar .nav-item .nav-link {
     font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  nav.navbar {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  nav.navbar {
+    max-width: 1140px;
   }
 }
 
@@ -119,6 +128,10 @@ section > div > .article, section > article {
 }
 #home img {
   max-width: 80%;
+}
+
+section {
+  transition: all 0.35s;
 }
 
 #links {
