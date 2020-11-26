@@ -106,7 +106,7 @@ section > div > .article, section > article {
 }
 
 #links {
-  padding: 4em 0;
+  padding: 8em 0;
 }
 #links img {
   width: 45px;
@@ -168,6 +168,9 @@ figure figcaption {
 }
 figure figcaption p {
   font-size: 3em;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.3s;
 }
 figure figcaption::before {
   content: "";
@@ -192,6 +195,9 @@ figure:hover figcaption::before {
 figure:hover figcaption {
   background: rgba(255, 121, 176, 0.8);
 }
+figure:hover figcaption p {
+  opacity: 1;
+}
 
 .scrollUp {
   position: fixed;
@@ -209,6 +215,7 @@ figure:hover figcaption {
 }
 .scrollUp img {
   width: 40px;
+  cursor: pointer;
 }
 
 .scrollUp.show {

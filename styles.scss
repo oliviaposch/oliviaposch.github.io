@@ -118,7 +118,7 @@ section > div > .article, section > article{
     }
 }
 #links {
-    padding: 4em 0;
+    padding: 8em 0;
     img {
     width: 45px;
     margin: 0 2em 0 0;
@@ -179,6 +179,9 @@ figure {
         transition-delay: 0.3s;
         p{
             font-size: 3em;
+            opacity: 0;
+            transition: 0.5s;
+        transition-delay: 0.3s;
         }
         &::before{
             content: "";
@@ -204,6 +207,7 @@ figure {
     }
     &:hover figcaption{
         background: rgba(255, 121, 176, 0.8);
+        p{opacity: 1;}
     }
 }
 .scrollUp {
@@ -220,6 +224,7 @@ figure {
     z-index: 1000;
     img {
             width: 40px;
+            cursor: pointer;
         }
 }
 .scrollUp.show {
