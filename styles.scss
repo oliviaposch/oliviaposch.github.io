@@ -36,9 +36,24 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
     }
 }
 
-nav.navbar .nav-item {
-    text-align: right;
+nav.navbar {
+    .nav-link {
+        text-align: right;
+    }
+
+    max-width: 960px;
+    margin: auto;
+    padding-top: 2em;
 }
+
+.navbar-light .navbar-nav .active>.nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show>.nav-link{
+    color: $color-dark-blue;
+}
+
+
 .description{
     margin-bottom: 2rem;
 }
@@ -60,7 +75,7 @@ table{
     }
 }
 section{
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         article, .article{
             height: 100vh;
         }
@@ -68,8 +83,9 @@ section{
    
 }
 section > div, section > article{
-    padding: 4em 0;
+    padding-top: 8em;
 }
+
 #skills{
     h1{
         margin-bottom: 2rem;
@@ -93,6 +109,14 @@ section > div, section > article{
     }
     
 }
+#home{
+    & > div:first-of-type{
+        padding-top: 8em;
+    }
+    img{
+        max-width: 80%;
+    }
+}
 #links {
     padding: 4em 0;
     img {
@@ -100,7 +124,6 @@ section > div, section > article{
     margin: 0 2em 0 0;
     }
 }
-
 article{
     & div:first-of-type{
         padding-bottom: 2rem;
@@ -183,3 +206,23 @@ figure {
         background: rgba(255, 121, 176, 0.8);
     }
 }
+.scrollUp {
+    position: fixed;
+    bottom: 47px;
+    right: 19px;
+    @include media-breakpoint-up(sm) {
+        right: 50px;
+    }
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    img {
+            width: 40px;
+        }
+}
+.scrollUp.show {
+    opacity: 1;
+    visibility: visible;
+  }

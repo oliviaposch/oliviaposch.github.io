@@ -28,8 +28,20 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
   }
 }
 
-nav.navbar .nav-item {
+nav.navbar {
+  max-width: 960px;
+  margin: auto;
+  padding-top: 2em;
+}
+nav.navbar .nav-link {
   text-align: right;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #3513f0;
 }
 
 .description {
@@ -56,14 +68,14 @@ table tr {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   section article, section .article {
     height: 100vh;
   }
 }
 
 section > div, section > article {
-  padding: 4em 0;
+  padding-top: 8em;
 }
 
 #skills h1 {
@@ -84,6 +96,13 @@ section > div, section > article {
   font-size: 20px;
   line-height: 1.7em;
   color: #000;
+}
+
+#home > div:first-of-type {
+  padding-top: 8em;
+}
+#home img {
+  max-width: 80%;
 }
 
 #links {
@@ -172,6 +191,29 @@ figure:hover figcaption::before {
 }
 figure:hover figcaption {
   background: rgba(255, 121, 176, 0.8);
+}
+
+.scrollUp {
+  position: fixed;
+  bottom: 47px;
+  right: 19px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+@media (min-width: 576px) {
+  .scrollUp {
+    right: 50px;
+  }
+}
+.scrollUp img {
+  width: 40px;
+}
+
+.scrollUp.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=styles.css.map */
