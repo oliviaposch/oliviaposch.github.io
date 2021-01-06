@@ -28,6 +28,18 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
   }
 }
 
+.navbar-light .navbar-toggler {
+  border-color: transparent !important;
+}
+.navbar-light .navbar-toggler .navbar-toggler-icon {
+  background-image: url("https://oliviaposch.github.io/assets/menu.svg") !important;
+}
+
+button:focus {
+  outline: none;
+  outline: 0px auto transparent;
+}
+
 nav.navbar {
   margin: auto;
   padding-top: 2em;

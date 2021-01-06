@@ -35,7 +35,20 @@ h1, .h1, h2, .h2, h3, .h3, .contact-title {
         font-size: $font-title-size-xl;
     }
 }
-
+.navbar-light {
+    .navbar-toggler{
+        border-color: transparent!important;
+        .navbar-toggler-icon {
+        //background-image: url('http://localhost:8000/assets/menu.svg')!important;
+        background-image: url('https://oliviaposch.github.io/assets/menu.svg')!important;
+        }
+    }
+}
+button:focus {
+    outline: none;
+    outline: 0px auto transparent;
+}
+ 
 nav.navbar {
     .nav-item{
         &:first-of-type{
