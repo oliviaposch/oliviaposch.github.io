@@ -71,3 +71,12 @@ jQuery(document).ready(function() {
     });
    
   });
+
+  const closeBtn = document.querySelector('img.close-btn');
+  // const navCollapse = document.querySelector('.navbar-collapse.show .show-nav');
+
+  // document.querySelector('.navbar-collapse .show-nav').style.height = '0%';
+  closeBtn.addEventListener('click', () => {
+    closeBtn.parentNode.classList.remove('show');
+    
+  })
